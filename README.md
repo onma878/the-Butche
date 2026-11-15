@@ -4,6 +4,17 @@
 
 THE BUTCHER is a responsive butcher shop website designed to showcase meat products and provide customers with a simple and interactive shopping experience.
 
+## 📸 Screenshots
+
+### Homepage
+![Homepage](./screenshots/Screenshot%202026-11-15%20105225.png)
+
+### Products Menu
+![Products Menu](./screenshots/Screenshot%202026-11-15%20105250.png)
+
+### Shopping Cart
+![Shopping Cart](./screenshots/Screenshot%202026-11-15%20105321.png)
+
 🌐 **Live Demo:** https://onma878.github.io/the-Butche/
 
 ## ✨ Features
