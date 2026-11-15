@@ -1,0 +1,651 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>THE BUTCHER </title>
+    <meta name="description" content="Explore quality meat cuts and prepare your order with THE BUTCHER.">
+    <!-- css -->
+    <link rel="stylesheet" href="./css/style.css">
+    <!-- aos lib -->
+    <link rel="stylesheet" href="./libs/aos-master/dist/aos.css">
+
+    <!-- Font Awesome -->
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
+        crossorigin="anonymous"
+        referrerpolicy="no-referrer"
+    >
+    <!-- fiv icon -->
+    <link rel="shortcut icon" href="./img/THEBUTCHERlogo.ico" type="image/x-icon">
+</head>
+
+<body>
+
+    <!-- heder start-->
+    <header id="header">
+        <nav class="navbar container">
+
+            <a href="#home-banner" class="logo-link">
+                <img
+                    src="./img/THEBUTCHERlogo.webp"
+                    alt="THE BUTCHER logo"
+                    class="logo"
+                >
+            </a>
+
+            <button
+                class="burgger"
+                type="button"
+                aria-label="Toggle navigation"
+                aria-expanded="false"
+                aria-controls="main-navigation"
+            >
+                <i class="fa-solid fa-bars"></i>
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+
+            <ul class="men-you" id="main-navigation">
+                <li><a href="#home-banner">Home</a></li>
+                <li><a href="#menu">Meat</a></li>
+                <li><a href="#calling">Order</a></li>
+                <li><a href="#about">About us</a></li>
+            </ul>
+
+        </nav>
+    </header>
+
+
+    <main>
+
+        <!-- HOME BANNER -->
+        <section id="home-banner">
+            <div class="container">
+
+                <div class="home-content">
+
+                    <div class="text-content" data-aos="fade-right">
+
+                        <h3>Make your cut</h3>
+
+                        <h1>Tasty Fresh Meat</h1>
+
+                        <p>
+                            Discover quality meat cuts and choose what suits
+                            your table.
+                        </p>
+
+                        <div class="typing-box">
+                            <span id="typed"></span>
+                            <span class="cursor"></span>
+                        </div>
+
+                        <a href="#menu" class="hero-btn">
+                            Explore Our Menu
+                        </a>
+
+                    </div>
+
+                    <div class="home-image" data-aos="fade-down">
+                        <img
+                            src="./img/THE_BUTCHER_dish.webp"
+                            alt="THE BUTCHER featured dish"
+                            class="img-home"
+                        >
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+
+
+        <!-- MENU -->
+        <section id="menu">
+
+            <div class="container">
+
+                <div class="heading-menu">
+
+                    <h2>Our Special Menu</h2>
+
+                    <p>
+                        Explore our selection and add your preferred products
+                        to your order.
+                    </p>
+
+                    <div class="menu-buttons" data-aos="fade-up">
+
+                        <button class="filter-btn active" data-category="all" type="button">
+                            All
+                        </button>
+
+                        <button class="filter-btn" data-category="beef" type="button">
+                            Beef
+                        </button>
+
+                        <button class="filter-btn" data-category="lamb" type="button">
+                            Lamb
+                        </button>
+
+                        <button class="filter-btn" data-category="goat" type="button">
+                            Goat
+                        </button>
+
+                        <button class="filter-btn" data-category="veal" type="button">
+                            Veal
+                        </button>
+
+                        <button class="filter-btn" data-category="offal" type="button">
+                            Offal
+                        </button>
+
+                        <button class="filter-btn" data-category="processed" type="button">
+                            Processed Meat
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+                <!-- JavaScript generates all product cards here -->
+                <div class="menu-products" id="menu-products"></div>
+
+
+                <!-- PRODUCT MODAL -->
+                <div class="modal-overlay" id="modal-overlay"></div>
+
+                <div
+                    class="modal-box"
+                    id="product-modal"
+                    role="dialog"
+                    aria-modal="true"
+                    aria-labelledby="modal-product-title"
+                    aria-hidden="true"
+                >
+
+                    <button
+                        type="button"
+                        class="modal-close"
+                        id="modal-close"
+                        aria-label="Close product details"
+                    >
+                        <i class="fa-solid fa-xmark"></i>
+                    </button>
+
+                    <div class="modal-container">
+
+                        <div class="product-photo">
+                            <img id="modal-image" src="" alt="">
+                        </div>
+
+                        <div class="title-modal">
+
+                            <div class="modal-product-info">
+                                <h3 id="modal-product-title"></h3>
+                                <span id="modal-product-price"></span>
+                                <p id="modal-product-description"></p>
+                            </div>
+
+                            <div class="choise">
+
+                                <h3>Select Your Quantity</h3>
+
+                                <div class="quantity-options">
+
+                                    <button type="button" class="kg-option" data-kg="0.5">
+                                        0.5 kg
+                                    </button>
+
+                                    <button type="button" class="kg-option" data-kg="1">
+                                        1 kg
+                                    </button>
+
+                                    <button type="button" class="kg-option" data-kg="2">
+                                        2 kg
+                                    </button>
+
+                                    <button type="button" class="kg-option" data-kg="3">
+                                        3 kg
+                                    </button>
+
+                                    <button type="button" class="kg-option" data-kg="4">
+                                        4 kg
+                                    </button>
+
+                                    <button type="button" class="kg-option" data-kg="5">
+                                        5 kg
+                                    </button>
+
+                                </div>
+
+                            </div>
+
+                            <div class="modal-action">
+
+                                <p class="modal-total">
+                                    Total:
+                                    <strong id="modal-total-price">0.00 $</strong>
+                                </p>
+
+                                <button
+                                    type="button"
+                                    class="btn-modal"
+                                    id="confirm-product"
+                                    disabled
+                                >
+                                    Add To Cart
+                                </button>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ORDER SECTION -->
+        <section id="calling">
+
+            <div class="container">
+
+                <div class="section-heading">
+                    <h2>Get in Touch With Us</h2>
+                    <p>
+                        Add your products, complete your details,
+                        and prepare your request.
+                    </p>
+                </div>
+
+
+                <div class="order-layout">
+
+                    <!-- ORDER FORM -->
+                    <div class="contact-content">
+
+                        <form id="order-form" novalidate>
+
+                            <div class="form-group">
+                                <label for="customer-name">Your Name</label>
+
+                                <input
+                                    type="text"
+                                    id="customer-name"
+                                    name="name"
+                                    placeholder="Enter your full name"
+                                    autocomplete="name"
+                                    required
+                                >
+                            </div>
+
+
+                            <div class="form-group">
+                                <label for="customer-number">Phone Number</label>
+
+                                <input
+                                    type="tel"
+                                    id="customer-number"
+                                    name="number"
+                                    placeholder="01XXXXXXXXX"
+                                    pattern="01[0-9]{9}"
+                                    minlength="11"
+                                    maxlength="11"
+                                    inputmode="numeric"
+                                    autocomplete="tel"
+                                    title="Enter an Egyptian mobile number starting with 01."
+                                    required
+                                >
+                            </div>
+
+
+                            <div class="form-group">
+                                <label for="customer-address">Your Address</label>
+
+                                <input
+                                    type="text"
+                                    id="customer-address"
+                                    name="address"
+                                    placeholder="Enter your delivery address"
+                                    autocomplete="street-address"
+                                    required
+                                >
+                            </div>
+
+
+                            <fieldset class="request-type">
+
+                                <legend>Choose Your Request Type</legend>
+
+                                <label class="request-option">
+                                    <input
+                                        type="radio"
+                                        name="request_type"
+                                        value="Order"
+                                        required
+                                    >
+                                    <span>Order</span>
+                                </label>
+
+                                <label class="request-option">
+                                    <input
+                                        type="radio"
+                                        name="request_type"
+                                        value="Reservation"
+                                    >
+                                    <span>Reservation</span>
+                                </label>
+
+                            </fieldset>
+
+
+                            <!-- PRODUCT SELECT -->
+                            <div class="product-selection">
+
+                                <div class="form-group">
+                                    <label for="meat">Select Your Product</label>
+
+                                    <select id="meat" name="meat">
+                                        <option value="">Select a product</option>
+                                    </select>
+                                </div>
+
+
+                                <div class="form-group">
+                                    <label for="quantity">Select Quantity</label>
+
+                                    <select id="quantity" name="quantity">
+                                        <option value="">Select quantity</option>
+                                        <option value="0.5">0.5 kg</option>
+                                        <option value="1">1 kg</option>
+                                        <option value="2">2 kg</option>
+                                        <option value="3">3 kg</option>
+                                        <option value="4">4 kg</option>
+                                        <option value="5">5 kg</option>
+                                    </select>
+                                </div>
+
+
+                                <button
+                                    type="button"
+                                    id="add-selected-product"
+                                    class="secondary-btn"
+                                >
+                                    <i class="fa-solid fa-plus"></i>
+                                    Add Product
+                                </button>
+
+                            </div>
+
+
+                            <div class="form-group">
+                                <label for="description">Additional Details</label>
+
+                                <textarea
+                                    id="description"
+                                    name="description"
+                                    placeholder="Write any additional details..."
+                                    rows="5"
+                                    maxlength="500"
+                                ></textarea>
+                            </div>
+
+
+                            <!-- CART DATA -->
+                            <input
+                                type="hidden"
+                                name="cart_items"
+                                id="cart-items-input"
+                            >
+
+                            <input
+                                type="hidden"
+                                name="cart_total"
+                                id="cart-total-input"
+                            >
+
+
+                            <button type="submit" class="submit-btn">
+                                Prepare Your Request
+                                <i class="fa-solid fa-arrow-right"></i>
+                            </button>
+
+                            <p
+                                id="order-status"
+                                class="order-status"
+                                role="status"
+                                aria-live="polite"
+                            ></p>
+
+                        </form>
+
+                    </div>
+
+
+                    <!-- CART -->
+                    <div class="products-box">
+
+                        <div class="cart-header">
+                            <div>
+                                <h3>Your Products</h3>
+                                <p>Review your selected items</p>
+                            </div>
+
+                            <span class="cart-count" id="cart-count">
+                                0 Items
+                            </span>
+                        </div>
+
+
+                        <div id="cart-items">
+
+                            <p class="empty-cart">
+                                Your cart is empty.
+                            </p>
+
+                        </div>
+
+
+                        <div class="cart-summary">
+
+                            <span>Total</span>
+
+                            <strong id="cart-total">
+                                0.00 $
+                            </strong>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ABOUT -->
+        <section id="about">
+
+            <div class="container">
+
+                <div class="about-layout">
+
+                    <div class="about-image">
+                        <img
+                            src="./img/THE BUTCHER logo .webp"
+                            alt="THE BUTCHER"
+                        >
+                    </div>
+
+
+                    <div class="about-content">
+
+                        <h2>About THE BUTCHER</h2>
+
+                        <p>
+                            THE BUTCHER is a meat-focused brand concept
+                            built around a clear product selection,
+                            convenient ordering, and a straightforward
+                            customer experience.
+                        </p>
+
+                        <div class="about-item">
+
+                            <h3>Our Vision</h3>
+
+                            <p>
+                                Our vision is to make choosing and ordering
+                                meat products simple and convenient.
+                                We aim to build a consistent experience
+                                across every customer touchpoint.
+                            </p>
+
+                        </div>
+
+
+                        <div class="about-item">
+
+                            <h3>Customer Information</h3>
+
+                            <ul>
+                                <li>Product availability and prices should be confirmed before publishing.</li>
+                                <li>Delivery areas and fees should be added by the store owner.</li>
+                                <li>Reservation and collection policies should be customized for each business.</li>
+                                <li>Contact details and branch information should be updated before launch.</li>
+                            </ul>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- FOOTER -->
+    <footer id="footer">
+
+        <div class="footer-content">
+
+            <div class="container">
+
+                <div class="footer-grid">
+
+                    <div class="footer-col">
+
+                        <h3>THE BUTCHER</h3>
+
+                        <p>
+                            Quality meat products and a convenient
+                            ordering experience.
+                        </p>
+
+                        <ul>
+                            <li>
+                                <i class="fa-solid fa-location-dot"></i>
+                                <span>Business address goes here</span>
+                            </li>
+
+                            <li>
+                                <i class="fa-solid fa-envelope"></i>
+                                <a href="mailto:your-email@example.com">
+                                    your-email@example.com
+                                </a>
+                            </li>
+
+                            <li>
+                                <i class="fa-solid fa-phone"></i>
+                                <a href="tel:+201000000000">
+                                    +20 100 000 0000
+                                </a>
+                            </li>
+                        </ul>
+
+                    </div>
+
+
+                    <div class="footer-col">
+
+                        <h3>Quick Links</h3>
+
+                        <ul>
+                            <li><a href="#home-banner">Home</a></li>
+                            <li><a href="#menu">Meat</a></li>
+                            <li><a href="#calling">Order</a></li>
+                            <li><a href="#about">About Us</a></li>
+                        </ul>
+
+                    </div>
+
+
+                    <div class="footer-col">
+
+                        <h3>Follow Us</h3>
+
+                        <ul>
+                            <li>
+                                <a href="#" aria-label="Facebook">
+                                    <i class="fa-brands fa-facebook"></i>
+                                    Facebook
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="#" aria-label="Instagram">
+                                    <i class="fa-brands fa-instagram"></i>
+                                    Instagram
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="#" aria-label="YouTube">
+                                    <i class="fa-brands fa-youtube"></i>
+                                    YouTube
+                                </a>
+                            </li>
+                        </ul>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="copyright">
+            <div class="container">
+                <p>
+                    &copy; <span id="current-year"></span>
+                    THE BUTCHER. All Rights Reserved.
+                </p>
+            </div>
+        </div>
+
+    </footer>
+
+
+    <!-- js -->
+    <script src="./libs/ityped-master/dist/index.min.js"></script>
+    <script src="./libs/aos-master/dist/aos.js"></script>
+    <script src="./js/main.js"></script>
+
+</body>
+</html>
